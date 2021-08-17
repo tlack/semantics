@@ -19,6 +19,7 @@ defmodule Semantics.MixProject do
 
   defp deps do
     [
+      {:similarity, "~> 0.2"},
       {:erlport, "~> 0.9"},
     ]
   end
