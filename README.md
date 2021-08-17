@@ -2,14 +2,14 @@
 
 Semantic similarity in Elixir using text embeddings from the excellent Python library [SentenceTransformers by SBert](https://www.sbert.net/index.html#).
 
-This is a very simple library that provides an `erlport`-based wrapper to SentenceTransformers.
+This is a very simple library that provides an `erlport`-based wrapper to SentenceTransformers, and a cosine similarity helper from [Similarity](https://github.com/preciz/similarity).
 
 ## Example
 
 ```
 iex(1)> import Semantics
 Semantics
-iex(2)> start_link()
+iex(2)> start_link("paraphrase-MiniLM-L6-v2")   # See SentenceTransformer docs for full list
 python start args: [
   env: [{'VIRTUAL_ENV', '/home/lookpop/semantics/priv/python/semantics-venv'}],
   python: '/home/lookpop/semantics/priv/python/semantics-venv/bin/python3',
@@ -48,6 +48,17 @@ iex(8)> similarity(embedding("I want to go horseback riding"), embedding("Riding
 iex(9)> similarity(embedding("I want to go horseback riding"), embedding("Spaceship parts and electric cars"))
 0.033702825222684064
 ```
+
+## Usage notes
+
+You can do `start_link()` without an argument to use the default model, `paraphrase-MiniLM-L6-v2`.
+
+Refer to [erlport's extensive documentation](http://erlport.org/docs/) for some of the finer points
+of wiring BEAM into Python. 
+
+If you want to see the Python side of things, see `priv/python/app.py`.
+
+See "Warning", below.
 
 ## Available models
 
