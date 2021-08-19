@@ -1,0 +1,15 @@
+MODEL = [
+    "paraphrase-mpnet-base-v2",
+    "paraphrase-multilingual-mpnet-base-v2",
+    "paraphrase-distilroberta-base-v2",
+    "paraphrase-MiniLM-L6-v2",
+    "paraphrase-MiniLM-L3-v2",
+    "stsb-mpnet-base-v2",
+    "nli-mpnet-base-v2",
+    "stsb-distilroberta-base-v2",
+    "nli-roberta-base-v2",
+    "stsb-roberta-base-v2",
+    "nli-distilroberta-base-v2",
+    "average_word_embeddings_komninos",
+    "msmarco-distilbert-base-v3",
+]
