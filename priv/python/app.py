@@ -5,14 +5,9 @@ import time
 
 import torch
 from sentence_transformers import SentenceTransformer
-# Used to create and store the Faiss index.
-import faiss
 import numpy as np
-import pickle
-import goose3
-import scipy
-import urllib.request
-import logging
+
+import erlport
 
 CUR_MODEL_OBJ = None
 CUR_MODEL_NAME = ""
