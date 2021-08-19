@@ -1,5 +1,5 @@
 wheel
-torch==1.8.1
+torch==1.9.0
 transformers==4.6.0
 sentence-transformers==1.2.0
 pandas==1.1.2
