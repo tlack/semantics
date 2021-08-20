@@ -7,8 +7,6 @@ import torch
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
-import erlport
-
 CUR_MODEL_OBJ = None
 CUR_MODEL_NAME = ""
 
