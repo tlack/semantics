@@ -1,7 +1,6 @@
 import torch
 from sentence_transformers import SentenceTransformer, util
 # Used to create and store the Faiss index.
-import faiss
 import numpy as np
 
 import evaluate_data
