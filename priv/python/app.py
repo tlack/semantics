@@ -7,6 +7,14 @@ import torch
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
+try:
+    # erlport isnt available in non-elixir host installs; these configurations are
+    # useful when training on a GPU, where it isnt necessary to get elixir/erlang
+    # setup just to use python parts
+    import erlport
+except:
+    pass
+
 CUR_MODEL_OBJ = None
 CUR_MODEL_NAME = ""
 
