@@ -89,7 +89,24 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/semantics](https://hexdocs.pm/semantics).
+## Evaluating models
 
+There is a Python-level script available to use to evaluate different models against your task.
+
+The evaluator accepts named groups of tests. Each test consists of two pairs of texts - one 
+that should evaluate closely together in the embedding space, and the other pair that should be further apart.
+
+The evaluator will try all the models you've configured against your tests and report results.
+
+See `priv/python/evaluate.py` and its corresponding files 
+
+## Fine tuning by retraining models
+
+What do you do if the models don't work?
+
+There is some code in `priv/python/retrain.py` that shows how you can use SentenceTransformer's
+retraining system. It requires labeled pairs of texts, where the label is a similarity score.
+
+# Credits and Contact
+
+Need help? Want to discuss NLP in Elixir? lackner@gmail.com
